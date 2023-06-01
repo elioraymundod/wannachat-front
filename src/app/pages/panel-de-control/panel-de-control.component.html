@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+  <div class="container__slider">
+    <h1 style="margin-top: 15%;">hola</h1>
+    <div class="container">
+      <input *ngFor="let i of this.preferenciasPersonalizadas" type="radio" name="slider" id="{{i.item}}">
+      <div class="cards">
+        <label *ngFor="let item of this.preferenciasPersonalizadas" class="card" for="{{item.item}}"
+          id="{{item.selector}}">
+          <img src="./assets/images/{{item.nombrePreferencia}}.png">
+          <div class="row d-flex justify-content-center mt-4">
+            <h2><b>{{item.nombrePreferencia}}</b></h2>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-frame">
+    <ul>
+      <li><img src="./assets/images/loging_bg.png" alt=""></li>
+      <li><img src="./assets/images/loging_v2.png" alt=""></li>
+      <li><img src="./assets/images/loging_v3.png" alt=""></li>
+      <li><img src="./assets/images/loging_v4.png" alt=""></li>
+    </ul>
+  </div>
+
+
+</body>
+
+</html>

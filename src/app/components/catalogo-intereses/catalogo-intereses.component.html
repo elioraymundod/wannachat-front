@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--Products-->
+  <div class="products" id="Products">
+    <h1>Categorias</h1>
+    <div class="box">
+      <div class="card">
+        <div class="image">
+          <img src="./assets/images/Tennis.png">
+        </div>
+        <div class="products_text">
+          <h2>Tenis</h2>
+          <p>
+            Felicidad es… Lucir zapatos increíbles
+          </p>
+          <!-- <h3>$100.99</h3> -->
+          <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <button *ngIf="zapato" (click)="listarIntereses('Usuario','Tennis')" class="btn ">Añadir Preferencia</button>
+          <button *ngIf="rzapato" (click)="RemoverIntereses('Tennis')" class="btn ">Remover Preferencia</button>
+          <!-- <a href="#" class="btn">Añadir Preferencia</a> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./assets/images/Playeras.png">
+        </div>
+        <div class="products_text">
+          <h2>Playeras</h2>
+          <p>
+            Siempre hay espacio para compar nuevas playeras
+          </p>
+          <!-- <h3>$200.99</h3> -->
+          <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <button *ngIf="playera" (click)="listarIntereses('Usuario','Playeras')" class="btn ">Añadir
+            Preferencia</button>
+          <button *ngIf="rplayera" (click)="RemoverIntereses('Playeras')" class="btn ">Remover Preferencia</button>
+          <!-- <a href="#" class="btn">Añadir Preferencia</a> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./assets/images/Sudaderas.png">
+        </div>
+        <div class="products_text">
+          <h2>Sudaderas</h2>
+          <p>
+            Mereces Sudaderas perfectas… Y para tí las tenemos.
+          </p>
+          <!-- <h3>$175.99</h3> -->
+          <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <button *ngIf="sudadera" (click)="listarIntereses('Usuario','Sudaderas')" class="btn ">Añadir
+            Preferencia</button>
+          <button *ngIf="rsudadera" (click)="RemoverIntereses('Sudaderas')" class="btn ">Remover Preferencia</button>
+          <!-- <a href="#" class="btn">Añadir Preferencia</a> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./assets/images/Gorras.png">
+        </div>
+        <div class="products_text">
+          <h2>Gorras</h2>
+          <p>
+            Felicidad es… Lucir gorras increíbles
+          </p>
+          <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <button *ngIf="gorra" (click)="listarIntereses('Usuario','Gorras')" class="btn ">Añadir Preferencia</button>
+          <button *ngIf="rgorra" (click)="RemoverIntereses('Gorras')" class="btn ">Remover Preferencia</button>
+          <!-- <a href="#" class="btn">Añadir Preferencia</a> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./assets/images/Bandas.png">
+        </div>
+        <div class="products_text">
+          <h2>Bandas Inteligentes</h2>
+          <p>
+            Buscas tecnologia de banguardia..
+          </p>
+          <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <button *ngIf="banda" (click)="listarIntereses('Usuario','Bandas')" class="btn ">Añadir Preferencia</button>
+          <button *ngIf="rbanda" (click)="RemoverIntereses('Bandas')" class="btn ">Remover Preferencia</button>
+          <!-- <a href="#" class="btn">Añadir Preferencia</a> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./assets/images/Balones.png">
+        </div>
+        <div class="products_text">
+          <h2>Balones de Futbool</h2>
+          <p>
+            Los balones de futbol son lo tuyo!
+          </p>
+          <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <button *ngIf="balon" (click)="listarIntereses('Usuario','Balones')" class="btn ">Añadir Preferencia</button>
+          <button *ngIf="rbalon" (click)="RemoverIntereses('Balones')" class="btn ">Remover Preferencia</button>
+          <!-- <a href="#" class="btn">Añadir Preferencia</a> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./assets/images/Audifonos.png">
+        </div>
+        <div class="products_text">
+          <h2>Audifonos</h2>
+          <p>
+            Nada como Audifonos de calidad para escoger
+          </p>
+          <!-- <h3>$110.99</h3> -->
+          <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <button *ngIf="audifonos" (click)="listarIntereses('Usuario','Audifonos')" class="btn ">Añadir
+            Preferencia</button>
+          <button *ngIf="raudifonos" (click)="RemoverIntereses('Audifonos')" class="btn ">Remover Preferencia</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="./assets/images/Pachones.avif">
+        </div>
+        <div class="products_text">
+          <h2>Pachones</h2>
+          <p>
+            Mereces el pachon perfecto para tus gustos
+          </p>
+          <!--  <h3>$150.99</h3> -->
+          <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <button *ngIf="pachon" (click)="listarIntereses('Usuario','Pachones')" class="btn ">Añadir
+            Preferencia</button>
+          <button *ngIf="rpachon" (click)="RemoverIntereses('Pachones')" class="btn ">Remover Preferencia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="services">
+    <div class="products_text">
+      <button class="btn " (click)="guardarPreferencias()">Guardar preferencias</button>
+    </div>
+  </div>
+  <div class="services" id="Servises">
+    <h1>Wanna<span>Chat</span></h1>
+    <div class="services_cards">
+      <div class="services_box">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Rapida Entrega</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div class="services_box">
+        <i class="fa-solid fa-rotate-left"></i>
+        <h3>10 Days Replacement</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div class="services_box">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24 x 7 Soporte</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="login_form">
+    <div class="left">
+      <img src="./assets/images/logshoes.png">
+    </div>
+  </div>
+  <footer>
+    <div class="footer_main">
+      <div class="tag">
+        <h1>Contacto</h1>
+        <a href="#"><i class="fa-solid fa-house"></i>Guatemala Guatemala </a>
+        <a href="#"><i class="fa-solid fa-phone"></i>PBX +502 2200 2544</a>
+        <a href="#"><i class="fa-solid fa-envelope"></i>contactwannaChat@gmail.com</a>
+      </div>
+      <div class="tag">
+        <h1>Nuestras Tiendas</h1>
+        <a href="#" class="center">Ciudad, Guatemala</a>
+        <a href="#" class="center">Ciudad, Cayala</a>
+        <a href="#" class="center">Ciudad, Xela</a>
+      </div>
+      <div class="tag">
+        <h1>Siguenos</h1>
+        <div class="social_link">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
